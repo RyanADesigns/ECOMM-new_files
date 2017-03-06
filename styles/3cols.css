@@ -1,9 +1,28 @@
 /*  GRID OF THREE   ============================================================================= */
 
-	
+.col-3-of-3 {
+   float:left;
+  display:inline-block;
+  position: relative;
+  left: 6rem;
+  width: 31%;
+  height: 60rem;
+  background-color:aliceblue;
+}
+
 .span_3_of_3 {
-	width: 31%;
+	width: 100%;
     height: 20rem;
+}
+
+.col-2-of-3 {
+  float:left;
+  display:block;
+  position: relative;
+  left: 3rem;
+  width: 31%;
+  height: 60rem;
+  background-color:aliceblue;
 }
 
 .span_2_of_3 {
@@ -11,15 +30,39 @@
     height: 20rem;
 }
 
+.col-1-of-3 {
+  float: left;
+  display:block;
+  position:relative;
+  width: 31%;
+  height: 60rem;
+  background-color:aliceblue;
+}
 .span_1_of_3 {
 	width: 31%;
     height: 20rem;
+    
 }
-
+/*media query setting for col divs need to be fixed */
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 2700px) {
+    .col-1-of-3 {
+    width:100%;
+    left: 0rem;
+   /*left 0rem meant to stop cols from shifting */
+    }
+    .col-2-of-3 {
+    width:100%;
+    left: 0rem;
+    position:relative;
+    top: 10rem;
+    }
+    .col-3-of-3 {
+    width:100%;
+    left: 0rem;
+    }
 	.span_3_of_3 {
 		width: 100%; 
 	}
@@ -29,4 +72,5 @@
 	.span_1_of_3 {
 		width: 100%;
 	}
+  
 }
