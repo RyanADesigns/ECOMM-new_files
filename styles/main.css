@@ -7,6 +7,7 @@ body {
   height: 23rem;
   } 
 header img {
+  border-style: none;
   position: absolute;
   top: 3rem;
 }
@@ -118,6 +119,7 @@ footer {
 
 @media only screen and (max-width: 2700px) {
   header img {
+    border: 0;
     position: absolute;
     top: 5rem;
     width: 55vmax;
