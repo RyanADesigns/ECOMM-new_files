@@ -51,6 +51,12 @@ var products = [
     "price": 70.99,
     "description": "Faribault brings you the Ashby Twill Scarf in Natural. Woven with a 'broken' twill technique, the Ashby Twill Scarf has a slight zigzag texture. Made in USA, this timeless scarf is crafted with luxurious merino wool and finished with heather gray fringe. 100% Merino wool",
     "imageTitle": "twill.jpg"
+  },
+  {
+    "name": "Grey Shredd",
+    "price": 29.99,
+    "description": "The Who What Oversize Color-Block Square Scarf is big, bold, and designed to twist and wrap any way you wish. All the colors of the season are harmonized in this oversize accent, so you can adjust to contrast or match your outfit; soft and lush, it’s your stylish standoff against cold AC and unexpected fall breezes. 100% acrylic",
+    "imageTitle": "grey_shredd.jpg"
   }
 ]
 
@@ -72,24 +78,71 @@ function AddPrices(cartProducts) {
 }
 
 function sort(){
-  console.log(document.sortForm.filter.value);
+  console.log("It WOrks");
+  console.log(document.filterform.filter.value);
   event.preventDefault();
 }
 var container = document.getElementsByClassName("item-container")
 
 
-
-
-function product_doc(){
+/*
+future capabilitities to generate product description on pageload 
+*/
+/*function product_doc(){
 for (var i = 0; i<products.length; i++) {
-  var descripiion = document.createElement("p");
-  descripiion.setAttribute("description", products[i][descripiion]);
+  
+  var description = document.createElement("p");
+  
+  description.setAttribute("description", products[i][description]);
+  
   item-container.appendChild(container);
+  
   console.log('YOOOOO');
 }
   return product_doc;
-  }
+  }*/
+
+
+/*Toggle function Add or Remove*/
+var cart = [];
+
+function giveOrTakeItem(name){
   
+  var index = cart.indexOf(name);
+  
+if (index >= 0) {
+  cart.splice(index, 1);
+} else {
+  cart.push(name);
+}
+  console.log(cart); 
+}
+
+/*trying to find out how to get splice or slice to work*/
+/*sorting function based on price*/
+function topSort(){ 
+  var pSort = products.sort(function (a, b) {
+  
+  return a.price - b.price;
+  });
+  console.log(pSort);
+}
+  console.log(topSort);
+
+
+/*trying to reverse order the array*/
+function sortCopy(arr) { 
+  return arr.slice(0).sort();
+}
+
+/*took initial products array objects and copied them with products.slice(0)so I could manipulate the order of the sorted array with out using the global products object.*/
+  var pRevSort = products.slice(0).sort(function (a, b) {  
+
+return b.price - a.price;
+    
+});
+
+console.log(pRevSort);
 
 
 

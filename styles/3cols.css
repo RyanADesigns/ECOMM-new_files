@@ -4,9 +4,9 @@
    float:left;
   display:inline-block;
   position: relative;
-  left: 6rem;
+  left: 4.5%;
   width: 31%;
-  height: 60rem;
+  height: 110rem;
   background-color:#CDBCA3;
 }
 
@@ -19,9 +19,9 @@
   float:left;
   display:block;
   position: relative;
-  left: 3rem;
+  left: 3%;
   width: 31%;
-  height: 60rem;
+  height: 110rem;
   background-color:#CDBCA3;
 }
 
@@ -34,8 +34,9 @@
   float: left;
   display:block;
   position:relative;
+  left: 1.5%;
   width: 31%;
-  height: 60rem;
+  height: 110rem;
   background-color:#CDBCA3;
 }
 .span_1_of_3 {
