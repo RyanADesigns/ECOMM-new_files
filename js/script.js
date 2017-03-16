@@ -101,6 +101,18 @@ for (var i = 0; i<products.length; i++) {
 }
   return product_doc;
   }*/
+/*cartNum.length*/
+var val = 1;
+function cartNumPlus(){
+ var value = val++;
+  document.getElementById("valID").innerHTML = value;
+  console.log(value);
+}
+
+function cartNumMinus(){
+  var value = val--;
+  document.getElementById("valID").innerHTML = value;
+}
 
 
 /*Toggle function Add or Remove*/
@@ -108,15 +120,17 @@ var cart = [];
 
 function giveOrTakeItem(name){
   
-  var index = cart.indexOf(name);
-  
+  var index = cart.indexOf(name); /*next use for loop to loop through created array to check for already added item. */
 if (index >= 0) {
   cart.splice(index, 1);
+  cartNumMinus();
 } else {
   cart.push(name);
+  cartNumPlus();
 }
   console.log(cart); 
 }
+
 
 /*trying to find out how to get splice or slice to work*/
 /*sorting function based on price*/

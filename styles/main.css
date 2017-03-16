@@ -140,6 +140,13 @@ footer {
    background-image: url(../images/woodfloorlong.jpg);
 }
 
+.fa-shopping-cart {
+  color: #A27B55;
+  position: relative;
+  top: 1.7rem;
+  
+}
+
 
 @media only screen and (max-width: 2700px) {
   header img {
@@ -167,6 +174,8 @@ footer {
     top: 250rem;
   }
 }
+
+
 
 
 
