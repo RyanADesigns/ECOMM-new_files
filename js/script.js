@@ -60,11 +60,6 @@ var products = [
   }
 ]
 
-for (var i=0; i<products.length; i++) {
-  console.log(products[i].name);
-  console.log(products[i].description);
-  console.log(products[i].price);
-}
 
 function AddPrices(cartProducts) {
   var total = 0;
@@ -134,6 +129,7 @@ if (index >= 0) {
 
 /*trying to find out how to get splice or slice to work*/
 /*sorting function based on price*/
+/*
 function topSort(){ 
   var pSort = products.sort(function (a, b) {
   
@@ -143,6 +139,7 @@ function topSort(){
 }
   console.log(topSort);
 
+*/
 
 /*trying to reverse order the array*/
 function sortCopy(arr) { 
@@ -151,12 +148,44 @@ function sortCopy(arr) {
 
 /*took initial products array objects and copied them with products.slice(0)so I could manipulate the order of the sorted array with out using the global products object.*/
   var pRevSort = products.slice(0).sort(function (a, b) {  
-
-return b.price - a.price;
+    return b.price - a.price;
     
 });
 
-console.log(pRevSort);
+
+function productSort(event){
+  event.preventDefault();
+var sortingBy = document.filterform.filter.value;
+  
+/*var pRevSort = products.slice(0).sort(function (a, b) {  
+    return b.price - a.price;
+    });*/
+  
+  /*for future reverse price lookup*/
+  
+  function topSort(){ 
+  var pSort = products.sort(function (a, b) {
+  
+  return a.price - b.price;
+  });
+  console.log(pSort);
+}
 
 
+  
+function nameSort(){
+  var nSort = products.sort(function(a, b) {
+    return a.name > b.name;
+  });
+  console.log(nSort);
+}
 
+if (sortingBy == 'name'){
+  nameSort();
+} else if (sortingBy == 'price'){
+  topSort();
+} else {
+  return false;
+}
+
+}

@@ -44,12 +44,12 @@ src="js/script.js"></script>-->
   
 
   <aside> 
-    <form name="filterform" onsubmit="sort();">
+    <form name="filterform" onsubmit="productSort(event)">
       <label>Filter By:
         <select name="filter"> 
-          <option onsubmit="" value="">Choose One</option>
+          <option value="">Choose One</option>
           <option value="price">Price</option>
-          <option onsubmit="" value="name">Name</option>
+          <option value="name">Name</option>
         </select>
       </label>
 
